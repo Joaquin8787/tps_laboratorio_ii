@@ -43,6 +43,7 @@ namespace Entidades
                 case '*':
                     resultado = num1 * num2;
                     break;
+                   
             }
             return resultado;
         }

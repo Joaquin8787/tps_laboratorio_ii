@@ -17,11 +17,6 @@ namespace MiCalculadora
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         /// <summary>
         /// Evento del form que desabhilita los botones para convertir a binario y a decimal al iniciar la calculadora 
         /// </summary>
@@ -53,9 +48,23 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            string resultado = (FormCalculadora.Operar(this.txtNumero1.Text, this.txtNumero2.Text, cmbOperador.SelectedItem.ToString())).ToString();
-            this.lblResultado.Text = resultado;
-            this.lstOperaciones.Items.Add($"{this.txtNumero1.Text} {cmbOperador.SelectedItem.ToString()} {this.txtNumero2.Text} = {resultado}");
+            string resultado = "";
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
+
+            if (!double.TryParse(txtNumero1.Text, out double num1) || !double.TryParse(txtNumero2.Text, out double num2))
+                lblResultado.Text = "Error, ingrese numeros";
+            else
+            {
+                resultado = FormCalculadora.Operar(num1.ToString(), num2.ToString(), cmbOperador.Text.ToString()).ToString();
+                this.lblResultado.Text = resultado;
+
+                btnConvertirABinario.Enabled = true;
+                btnConvertirADecimal.Enabled = false;
+
+                this.lstOperaciones.Items.Add($"{num1} {cmbOperador.SelectedItem} {num2} = {resultado}");
+            }
+           
         }
 
         /// <summary>
@@ -101,11 +110,6 @@ namespace MiCalculadora
             this.lblResultado.Text = new Operando().BinarioDecimal(this.lblResultado.Text);
             this.btnConvertirABinario.Enabled = true;
         }
-
-        private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         //METODOS
 
         /// <summary>
@@ -113,9 +117,10 @@ namespace MiCalculadora
         /// </summary>
         private void Limpiar()
         {
-            this.txtNumero1.Text = "";
-            this.txtNumero2.Text = "";
-            this.cmbOperador.Text = "";
+            this.txtNumero1.ResetText();
+            this.txtNumero2.ResetText();
+            this.cmbOperador.ResetText();
+            this.lblResultado.ResetText();
             this.lstOperaciones.Text = string.Empty;
         }
         /// <summary>
@@ -137,6 +142,11 @@ namespace MiCalculadora
                 return Calculadora.Operar(operando1, operando2, operadorChar);
             }
             return 0;
+        }
+
+        private void lblResultado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

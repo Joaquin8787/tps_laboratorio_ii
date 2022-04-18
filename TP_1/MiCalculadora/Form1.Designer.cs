@@ -64,23 +64,23 @@
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(56, 23);
             this.cmbOperador.TabIndex = 1;
-            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.cmbOperador_SelectedIndexChanged);
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(283, 11);
+            this.lblResultado.Location = new System.Drawing.Point(12, 11);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(13, 15);
+            this.lblResultado.Size = new System.Drawing.Size(16, 15);
             this.lblResultado.TabIndex = 2;
-            this.lblResultado.Text = "0";
-            this.lblResultado.Click += new System.EventHandler(this.label1_Click);
+            this.lblResultado.Text = " 0";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // lstOperaciones
             // 
             this.lstOperaciones.FormattingEnabled = true;
             this.lstOperaciones.ItemHeight = 15;
-            this.lstOperaciones.Location = new System.Drawing.Point(337, 11);
+            this.lstOperaciones.Location = new System.Drawing.Point(341, 3);
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(120, 139);
             this.lstOperaciones.TabIndex = 3;
@@ -155,6 +155,7 @@
             this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.btnOperar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(12, 60);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
