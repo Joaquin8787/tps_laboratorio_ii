@@ -40,7 +40,7 @@ namespace MiCalculadora
             }
         }
         //BOTONES
-
+ 
         /// <summary>
         /// Realiza una operacion con los numeros y operador pasados por parametros al tocar el boton, lo muestra por el label y muestra la operacion en el listBox 
         /// </summary>
