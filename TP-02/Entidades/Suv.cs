@@ -15,7 +15,7 @@ namespace Entidades
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
-        protected new ETamanio Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {

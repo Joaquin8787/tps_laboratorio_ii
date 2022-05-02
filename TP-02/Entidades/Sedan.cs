@@ -34,7 +34,7 @@ namespace Entidades
         /// <summary>
         /// Sedan son 'Mediano'
         /// </summary>
-        protected new ETamanio Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {

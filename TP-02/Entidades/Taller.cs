@@ -67,18 +67,21 @@ namespace Entidades
                         if(v is Sedan)
                         {
                             sb.AppendLine(v.Mostrar());
+
                         }
                         break;
                     case ETipo.Ciclomotor:
                         if (v is Ciclomotor)
                         {
                             sb.AppendLine(v.Mostrar());
+
                         }
                         break;
                     case ETipo.SUV:
                         if (v is Suv)
                         {
                             sb.AppendLine(v.Mostrar());
+
                         } 
                         break;
                     default:
@@ -109,7 +112,7 @@ namespace Entidades
                         return taller;
                     }
                 }
-                taller.vehiculos.Add(vehiculo);
+                taller.vehiculos.Add(vehiculo);  
             }
             return taller;
         }
@@ -121,12 +124,15 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller.vehiculos)
+            if(taller.vehiculos.Count != 0)
             {
-                if (v == vehiculo)
+                foreach (Vehiculo v in taller.vehiculos)
                 {
-                    taller.vehiculos.Remove(vehiculo);
-                    break;
+                    if (v == vehiculo)
+                    {
+                        taller.vehiculos.Remove(vehiculo);
+                        break;
+                    }
                 }
             }
             return taller;
