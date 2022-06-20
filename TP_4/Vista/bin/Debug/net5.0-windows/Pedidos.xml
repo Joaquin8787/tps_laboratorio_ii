@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pedido>
+    <Nombre>Joaquin</Nombre>
+    <Direccion>24 de Noviembre 138</Direccion>
+    <NumeroTelefono>2975045627</NumeroTelefono>
+    <ListaProductos>
+      <Producto xsi:type="Dumpling">
+        <Tipo>Dumpling</Tipo>
+        <Precio>120</Precio>
+        <Cantidad>15</Cantidad>
+        <TipoDeRelleno>Hongos</TipoDeRelleno>
+      </Producto>
+    </ListaProductos>
+    <PrecioFinal>1800</PrecioFinal>
+    <FechaYHora>2022-06-20T07:37:47.7041246-03:00</FechaYHora>
+  </Pedido>
+  <Pedido>
+    <Nombre>Paula</Nombre>
+    <Direccion>Maza 745</Direccion>
+    <NumeroTelefono>1143567548</NumeroTelefono>
+    <ListaProductos>
+      <Producto xsi:type="Sushi">
+        <Tipo>Sushi</Tipo>
+        <Precio>135</Precio>
+        <Cantidad>12</Cantidad>
+        <TipoDeRoll>Ibiza</TipoDeRoll>
+      </Producto>
+    </ListaProductos>
+    <PrecioFinal>1620</PrecioFinal>
+    <FechaYHora>2022-06-20T07:39:07.1334009-03:00</FechaYHora>
+  </Pedido>
+  <Pedido>
+    <Nombre>Juan Pablo</Nombre>
+    <Direccion>Av Santa Fe 3875</Direccion>
+    <NumeroTelefono>2974563422</NumeroTelefono>
+    <ListaProductos>
+      <Producto xsi:type="Sushi">
+        <Tipo>Sushi</Tipo>
+        <Precio>100</Precio>
+        <Cantidad>20</Cantidad>
+        <TipoDeRoll>RollKina</TipoDeRoll>
+      </Producto>
+    </ListaProductos>
+    <PrecioFinal>2000</PrecioFinal>
+    <FechaYHora>2022-06-20T07:40:14.3335958-03:00</FechaYHora>
+  </Pedido>
+  <Pedido>
+    <Nombre>Sandra </Nombre>
+    <Direccion>Canadon Leon 1327</Direccion>
+    <NumeroTelefono>1148756435</NumeroTelefono>
+    <ListaProductos>
+      <Producto xsi:type="Dumpling">
+        <Tipo>Dumpling</Tipo>
+        <Precio>120</Precio>
+        <Cantidad>20</Cantidad>
+        <TipoDeRelleno>Hongos</TipoDeRelleno>
+      </Producto>
+    </ListaProductos>
+    <PrecioFinal>2400</PrecioFinal>
+    <FechaYHora>2022-06-20T07:42:21.9762463-03:00</FechaYHora>
+  </Pedido>
+</ArrayOfPedido>
